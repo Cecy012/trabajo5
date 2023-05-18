@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        p {
+            color: white;
+            size: 40px;
+            font-size: 40px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+    <style>
+        j {
+            color: white;
+            size: 40px;
+            font-size: 20px;
+            text-align: center;
+            font-family: monospace;
+        }
+    </style>
+    <tittle>
+        <h1>
+            <p>Arctic Monkeys</p>
+        </h1>
+    </tittle>
+    <link rel="icon" href="../examenU1_Victoriano_Salgado_Cecilia/artm.ico">
+    <div style="text-align:center;"> <img src="./img.jpg" alt="Integrantes de la banda" width="350" height="350"></div>
+
+
+    <style>
+        #imagen {
+            width: 500px;
+            height: auto;
+        }
+    </style>
+
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const botonCambiarColor = document.getElementById("botonCambiarColor");
+            const botonCambiarTexto = document.getElementById("botonCambiarTexto");
+            const botonCambiarImagen = document.getElementById("botonCambiarImagen");
+            const botonRestaurarImagen = document.getElementById("botonRestaurarImagen");
+            const botonOcultarMensaje = document.getElementById("botonOcultarMensaje");
+            const mensaje = document.getElementById("mensaje");
+            const imagen = document.getElementById("imagen");
+            const imagenOriginal = imagen.src;
+            const div = document.getElementById("miDiv");
+
+            botonCambiarColor.addEventListener("click", function () {
+                document.body.style.backgroundColor = "blue";
+            });
+
+            botonCambiarTexto.addEventListener("click", function () {
+                const parrafo = document.getElementById("miParrafo");
+                const nuevoTexto = "Arctic Monkeys es variado en cuanto a sus generos musicales que tocan, por ejemplo, el álbum AM es alternativa/independiente... Eso los hace tan chidos uwu";
+
+                parrafo.textContent = nuevoTexto;
+            });
+
+            botonCambiarImagen.addEventListener("click", function () {
+                imagen.src = "monk.jpg"; /* Cambia esta línea con la ruta de la imagen que deseas mostrar */
+            });
+
+            botonRestaurarImagen.addEventListener("click", function () {
+                imagen.src = imagenOriginal;
+            });
+
+            botonOcultarMensaje.addEventListener("click", function () {
+                mensaje.classList.toggle("oculto");
+            });
+
+            const botonEscribirTexto = document.getElementById("botonEscribirTexto");
+            botonEscribirTexto.addEventListener("click", function () {
+                const h1 = document.createElement("h1");
+                const texto = document.createTextNode("Este texto no lo escribió Cecilia Victoriano, lo escribió JavaScript uwu");
+
+                h1.appendChild(texto);
+                div.appendChild(h1);
+            });
+        };
+    </script>
+
+</head>
+
+<body>
+
+    <body bgcolor="#222222">
+        <div style="text-align: center;">
+            <h3>
+                <j>
+                    Arctic Monkeys es una banda británica de rock, formada en Sheffield, Reino Unido. <br>
+                    El grupo está compuesto por el guitarrista principal y vocalista Alex Turner, <br> el guitarrista
+                    Jamie Cook,
+                    el baterista Matt Helders y el bajista Nick O'Malley. <br>
+                    El bajista original de la banda, Andy Nicholson, dejó el proyecto en 2006 <br>poco después del
+                    lanzamiento del álbum debut de la banda.
+                </j>
+            </h3>
+        </div>
+        <br>
+        <br>
+        <br>
+        <j>
+            <img src="imgg.jpg" width="450" height="300" align="right">
+            <j>Las letras de las canciones de Arctic Monkeys frecuentemente hablan de la realidad social, como por
+                ejemplo "A Certain Romance", la cual describe a la cultura indie; observaciones sobre la vida de la
+                clase obrera, como en el tema "When the Sun Goes Down", descrita como una "canción ingeniosa e intensa
+                acerca del distrito de Neepsend de Sheffield." Basados en su estilo musical, Arctic Monkeys han sido
+                comparados con músicos como el rapero Mike Skinner, Morrissey y Jarvis Cocker,​ conocidos por sus
+                combinaciones de letras observacionales y humor. La inspiración principal de Arctic Monkeys viene de The
+                Smiths, The Beatles, The Velvet Underground, The Vines y Oasis</j>
+        </j>
+        <br>
+        <br>
+        <br>
+
+        <button id="botonCambiarColor">Conoce el color favorito del baterista!!</button>
+
+        <br>
+
+        <button id="botonCambiarTexto">Haz clic para vers la respuesta</button>
+        <p id="miParrafo">¿ARCTIC MONKEYS TOCA UN SOLO GÉNERO?</p>
+
+        <br>
+
+        <img id="imagen" src="arc.jpg" alt="Imagen" />
+        <br />
+        <button id="botonCambiarImagen">Siguiente Imagen</button>
+        <button id="botonRestaurarImagen">Imagen Anterior</button>
+
+        <br>
+
+        <h2 id="mensaje">Hola Mundo</h2>
+        <button id="botonOcultarMensaje">No quiero ver este mensaje</button>
+
+        <br>
+
+        <button id="botonEscribirTexto">Escribir Texto en Div</button>
+        <div id="miDiv"></div>
+    </body>
+
+</html>
